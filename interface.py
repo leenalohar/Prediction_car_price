@@ -34,4 +34,4 @@ def Predict_car_price():
     return jsonify({'Charges':f'The Charges of car is{charges}'})
 
 if __name__ == '__main__':
-    app.run(port = config.PORT_NUMBER,debug = True ) # Server Start
+    app.run(port = config.PORT_NUMBER,debug = False,host='0.0.0.0' ) # Server Start
