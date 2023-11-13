@@ -28,7 +28,7 @@ class CarPrediction():
 
         car_brand_name_index = self.json_data["columns"].index(self.car_brand_name)
         test_array = np.zeros(len(self.json_data["columns"]))
-        test_array[0] = datetime.datetime.today().year - self.year
+        test_array[0] = self.year
         test_array[1] = self.km_driven
         test_array[2] = self.json_data['fuel'][self.fuel]
         test_array[3] = self.json_data['seller_type'][self.seller_type]
@@ -42,15 +42,16 @@ class CarPrediction():
 
         return predict_charges
 if __name__ == "__main__":
-    year = 2001
-    km_driven= 70000
-    fuel = 'Petrol'
-    seller_type = "Individual"
-    transmission = 'Manual'
-    owner = 'First Owner'
-    car_brand_name = 'Maruti'  
+    app.run(debug=True)
+    # year = 2001
+    # km_driven= 70000
+    # fuel = 'Petrol'
+    # seller_type = "Individual"
+    # transmission = 'Manual'
+    # owner = 'First Owner'
+    # car_brand_name = 'Maruti'  
 
-    car_price =  CarPrediction(year,km_driven,fuel,seller_type,transmission,owner,car_brand_name)
-    car_price.get_predict_chagres()
-        
+    # car_price =  CarPrediction(year,km_driven,fuel,seller_type,transmission,owner,car_brand_name)
+    # car_price.get_predict_chagres()
+   
         
