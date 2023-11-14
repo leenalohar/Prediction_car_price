@@ -17,7 +17,7 @@ def home():
 @app.route('/predict',methods=['POST'])
 def Predict_car_price():
 
-    data =request.form
+    data = request.form
 
     year =         eval(data['year'])
     km_driven=     eval(data['km_driven'])

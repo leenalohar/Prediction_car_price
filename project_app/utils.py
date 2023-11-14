@@ -7,7 +7,7 @@ import datetime
 
 class CarPrediction():
     def __init__(self,year,km_driven,fuel,seller_type,transmission,owner,car_brand_name):
-        self.year = year
+        self.year = datetime.datetime.today().year - year
         self.km_driven= km_driven
         self.fuel=fuel
         self.seller_type=seller_type
