@@ -1,5 +1,5 @@
 from flask import Flask,jsonify,render_template,request
-from werkzeug.utils import url_quote
+from urllib.parse import quote as url_quote
 from project_app.utils import CarPrediction
 import config
 
@@ -28,7 +28,7 @@ def Predict_car_price():
     owner =        data['owner']
     car_brand_name = data['car_brand_name']
 
-    print('year,km_driven,fuel,seller_type,transmission,owner,car_brand_name >>',year,km_driven,fuel,seller_type,transmission,owner,car_brand_name)
+    # print('year,km_driven,fuel,seller_type,transmission,owner,car_brand_name >>',year,km_driven,fuel,seller_type,transmission,owner,car_brand_name)
 
     car_price =  CarPrediction(year,km_driven,fuel,seller_type,transmission,owner,car_brand_name)
     charges = car_price.get_predict_chagres()

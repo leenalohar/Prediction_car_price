@@ -36,14 +36,12 @@ class CarPrediction():
         test_array[5] = self.json_data['owner'][self.owner]
         test_array[car_brand_name_index] = 1
 
-        print('Test_array',test_array)
+        # print('Test_array',test_array)
 
         predict_charges  = np.expm1(self.model.predict([test_array]))
 
         return predict_charges
-if __name__ == "__main__":
-    app.run(debug=False,host='0.0.0.0')
-    # year = 2001
+
     # km_driven= 70000
     # fuel = 'Petrol'
     # seller_type = "Individual"
