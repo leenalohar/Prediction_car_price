@@ -1,4 +1,5 @@
 from flask import Flask,jsonify,render_template,request
+from werkzeug.urls import url_quote
 from project_app.utils import CarPrediction
 import config
 
