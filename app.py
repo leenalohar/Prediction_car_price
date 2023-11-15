@@ -1,6 +1,6 @@
 from flask import Flask,jsonify,render_template,request
 from urllib.parse import quote as url_quote
-from project_app.utils import CarPrediction
+from function import CarPrediction
 import config
 
 app = Flask(__name__)
